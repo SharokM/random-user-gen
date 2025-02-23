@@ -1,5 +1,5 @@
 const randomFolks = document.querySelector(".random-peeps");
-const selectUserNumber = document.querySelector("#user");
+const selectUserNumber = document.querySelector("#users");
 
 const getData = async function (numUsers) {
     const userRequest = await fetch(`https://randomuser.me/api?results=${numUsers}`);
@@ -16,10 +16,10 @@ getData(1);
 const displayUsers = function (userResults) {
     randomFolks.innerHTML = "";
 
-    for (let user of userResults) {
-        let country = user.location.country
-        let name = user.name.last
-        let imageUrl = user.picture.medium
+    for (const user of userResults) {
+        const country = user.location.country
+        const name = user.name.first
+        const imageUrl = user.picture.medium
         const userDiv = document.createElement("div");
         
         userDiv.innerHTML = `
