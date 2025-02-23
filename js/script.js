@@ -31,9 +31,7 @@ const displayUsers = function (userResults) {
 } 
 };
 
-// const numUsers = document.classList.remove("hide")
-
-selectUserNumber.addEventListener("change", function (e) {
+selectUserNumber.addEventListener("change", function(e) {
     const numUsers = e.target.value;
     getData(numUsers);
 })
